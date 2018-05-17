@@ -10,11 +10,11 @@ import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.OutputKeys;
-
+import javazoom.jl.player.Player;
 
 class TCPClient {
     public static void main(String argv[]) throws Exception {
-        Socket clientSocket = new Socket("localhost",1723);
+        Socket clientSocket = new Socket("localhost",8888);
 
         while (true) {
 
@@ -57,6 +57,19 @@ class TCPClient {
             BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             modifiedSentence = inFromServer.readLine();
             System.out.println("FROM SERVER: " + modifiedSentence);
+
+            byte[] bytes = modifiedSentence.getBytes();
+
+            for(int i = 0; i < bytes.length; i++){
+                System.out.println(bytes[i]);
+            }
+
+            //String filename = "/home/racso/Project#2/Bella.mp3";
+            //MP3 mp3 = new MP3(bytes);
+            //mp3.play();
+
+
+
         }
 
 
