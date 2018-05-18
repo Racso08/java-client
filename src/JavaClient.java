@@ -5,6 +5,7 @@ import org.xml.sax.*;
 import javax.xml.parsers.*;
 import javax.xml.xpath.*;
 import java.io.*;
+import java.util.Base64;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
@@ -58,15 +59,18 @@ class TCPClient {
             modifiedSentence = inFromServer.readLine();
             System.out.println("FROM SERVER: " + modifiedSentence);
 
-            byte[] bytes = modifiedSentence.getBytes();
+            //byte[] bytes = modifiedSentence.getBytes();
+            //System.out.println(bytes[0]);
 
-            for(int i = 0; i < bytes.length; i++){
-                System.out.println(bytes[i]);
-            }
+
+            //for(int i = 0; i < bytes.length; i++){
+              //  System.out.println(bytes[i]);
+            //}
 
             //String filename = "/home/racso/Project#2/Bella.mp3";
-            //MP3 mp3 = new MP3(bytes);
+            //MP3 mp3 = new MP3();
             //mp3.play();
+            //mp3.close();
 
 
 
