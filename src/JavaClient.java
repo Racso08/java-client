@@ -61,25 +61,23 @@ class TCPClient {
             modifiedSentence = inFromServer.readLine();
             System.out.println("FROM SERVER: " + modifiedSentence);
 
-            System.out.println(modifiedSentence);
 
-            byte[] bytes =  modifiedSentence.getBytes(StandardCharsets.UTF_8);
+
+            byte[] bytes =  Base64.getDecoder().decode(modifiedSentence.getBytes(StandardCharsets.UTF_8));
+            System.out.println(bytes);
+
            // byte[] bytes = modifiedSentence.getBytes(StandardCharsets.UTF_8);
-            System.out.println("ldksnfklasnkldnklasdjkl");
+            //System.out.println(bytes);
 
 
             //for(int i = 0; i < bytes.length; i++){
               //  System.out.println(bytes[i]);
             //}
 
-            String filename = "/home/racso/Project#2/"+modifiedSentence;
+            //String filename = "/home/racso/Project#2/Bella.mp3";
 
-                MP3 mp3 = new MP3(filename);
+                MP3 mp3 = new MP3(bytes);
                 mp3.play();
-
-            File file = new File(filename);
-            file.delete();
-
 
             //mp3.close();
 

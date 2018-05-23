@@ -12,9 +12,10 @@ class MP3 {
     private byte[] bytesArray;
 
     // constructor that takes the name of an MP3 file
-    public MP3(String filename){
+    public MP3(byte[] bytesArray){
 
         //this.bytesArray = bytesArray;
+        this.bytesArray = bytesArray;
         this.filename = filename;
 
     }
@@ -41,9 +42,9 @@ class MP3 {
             //  System.out.println(bytesArray[i]);
             //}
 */
-            FileInputStream fis = new FileInputStream(filename);
-            //ByteArrayInputStream data = new ByteArrayInputStream(bytesArray); //cambio de byte array a un buffer para la reproduccion
-            BufferedInputStream bis = new BufferedInputStream(fis);
+            //FileInputStream fis = new FileInputStream(filename);
+            ByteArrayInputStream data = new ByteArrayInputStream(bytesArray); //cambio de byte array a un buffer para la reproduccion
+            BufferedInputStream bis = new BufferedInputStream(data);
             player = new Player(bis);
         } catch (Exception e) {
             System.out.println("Problem playing file " + filename);
