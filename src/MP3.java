@@ -24,6 +24,13 @@ class MP3 {
         if (player != null) player.close();
     }
 
+    public boolean isfinish() {
+        if(player.isComplete())
+            return true;
+        else
+            return false;
+    }
+
     // play the MP3 file to the sound card
     public void play() {
         try {

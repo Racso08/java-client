@@ -8,6 +8,7 @@ import java.io.*;
 import java.nio.ShortBuffer;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
+import java.util.concurrent.TimeUnit;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerFactory;
@@ -16,6 +17,8 @@ import javax.xml.transform.OutputKeys;
 import javazoom.jl.player.Player;
 
 class TCPClient {
+    public static boolean stream;
+
     public static void main(String argv[]) throws Exception {
         Socket clientSocket = new Socket("localhost",8888);
 
@@ -63,23 +66,13 @@ class TCPClient {
 
 
 
+
             byte[] bytes =  Base64.getDecoder().decode(modifiedSentence.getBytes(StandardCharsets.UTF_8));
             System.out.println(bytes);
+            MP3 mp3 = new MP3(bytes);
+            mp3.play();
+            TimeUnit.SECONDS.sleep(6);
 
-           // byte[] bytes = modifiedSentence.getBytes(StandardCharsets.UTF_8);
-            //System.out.println(bytes);
-
-
-            //for(int i = 0; i < bytes.length; i++){
-              //  System.out.println(bytes[i]);
-            //}
-
-            //String filename = "/home/racso/Project#2/Bella.mp3";
-
-                MP3 mp3 = new MP3(bytes);
-                mp3.play();
-
-            //mp3.close();
 
         }
 
