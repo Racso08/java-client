@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f22b8aa-48a2-4135-8ad2-c2d1c1739501" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/JavaClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/JavaClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MP3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MP3.java" afterDir="false" />
-    </list>
+    <list default="true" id="1f22b8aa-48a2-4135-8ad2-c2d1c1739501" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -252,12 +248,12 @@
       <workItem from="1526598399266" duration="2674000" />
       <workItem from="1526614075363" duration="707000" />
       <workItem from="1526953602684" duration="9719000" />
-      <workItem from="1527017364894" duration="13036000" />
+      <workItem from="1527017364894" duration="13153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28846000" />
+    <option name="totallyTimeSpent" value="28963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="732" extended-state="6" />
@@ -272,7 +268,7 @@
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3279483" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3279483" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
