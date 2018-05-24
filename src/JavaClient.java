@@ -56,6 +56,9 @@ class TCPClient {
 //
 //            XML_to_String converter = new XML_to_String();
 //            String xml = converter.toString(doc).replaceAll("\\<\\?xml(.+?)\\?\\>", "").trim();
+
+
+
             System.out.println("SENDING... " + sentence);
             outToServer.writeBytes(sentence + '\n');
 
